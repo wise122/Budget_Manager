@@ -1,86 +1,102 @@
-# 💰 SavingsTarget - Wota SSK Tabungan Tracker
+# Fandom Budget Manager💜
 
-Aplikasi kecil berbasis React + Chakra UI untuk melacak tabungan menuju target tertentu, cocok untuk para Wota yang sedang menabung demi event seperti **JKT48 SSK (Senbatsu Sousenkyo)**.
+Aplikasi sederhana berbasis React + Chakra UI yang membantu kamu mengelola tabungan, wishlist, dan pengeluaran, terutama untuk kebutuhan fandom seperti JKT48 merch, tiket, dan lainnya.
 
-## ✨ Fitur
+## 🎯 Fitur Utama
 
-- 🎯 Input dan ubah **target tabungan**
-- ➕ Tambahkan jumlah tabungan secara bertahap
-- 📈 Tampilkan progress dalam bentuk **progress bar**
-- 🧾 Simpan **riwayat penambahan** dengan waktu
-- 🔒 Data disimpan di **localStorage**, aman dari refresh
-- 🚫 Validasi terhadap input yang tidak masuk akal
+### 1. Dashboard
+- Menampilkan ringkasan target tabungan dan status pencapaian.
+- Tampilan responsif dengan sidebar di desktop dan bottom bar di mobile.
 
-## 🧱 Teknologi
+### 2. Tabungan
+- Atur target tabungan kamu.
+- Tambahkan jumlah tabungan secara berkala.
+- Simpan data di localStorage.
+- Progress bar untuk menunjukkan seberapa dekat kamu dengan target.
+- Riwayat penambahan tabungan dengan tanggal.
 
-- React
-- Chakra UI
-- JavaScript (ES6+)
-- localStorage (untuk persistensi)
+### 3. Wishlist
+- Daftar barang atau keinginan kamu, seperti merchandise, tiket, dll.
+- Tampilkan nama item dan harga.
+- Bisa digunakan untuk merencanakan pengeluaran ke depan.
 
-## 🚀 Cara Menjalankan
+### 4. Pengeluaran
+- Catat pengeluaran kamu.
+- Input nama barang, kategori, harga, dan tanggal.
+- Daftar pengeluaran ditampilkan dengan tampilan bersih dan ringkas.
 
-1. **Kloning repositori ini**
+### 5. Pemasukan (Coming Soon 🚧)
+- Akan memungkinkan kamu mencatat pemasukan secara berkala.
+- Bisa digunakan untuk mengelola cashflow bulanan.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- **React** – UI library
+- **Chakra UI** – komponen UI yang modern dan responsif
+- **React Router DOM** – navigasi antar halaman
+- **LocalStorage** – untuk menyimpan data tabungan di browser
+
+---
+
+## 📦 Cara Install dan Jalankan
+
+1. Clone repo ini:
    ```bash
-   git clone https://github.com/wise122/Budget_Manager.git
+   git clone https://github.com/username/Budget_Manager.git
    cd Budget_Manager
    ```
 
-2. **Instal dependensi**
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Jalankan aplikasi**
+3. Jalankan aplikasi:
    ```bash
    npm start
    ```
 
-4. Buka di browser:
-   ```
-   http://localhost:3000
-   ```
+---
 
+## 📱 Tampilan Responsif
 
-## 🗂 Struktur File
+- Sidebar ditampilkan di desktop.
+- Bottom navigation otomatis muncul di mobile view.
 
-```
-src/
-├── components/
-│   └── SavingsTarget.jsx
-│   └── BottomBar.jsx
-│   └── Dashboard.jsx
-│   └── ExpenseForm.jsx
-│   └── Sidebar.jsx
-│   └── WishlistPage.jsx
-├── App.jsx
-├── index.js
-```
+---
 
-## 📦 Penyimpanan
+## 💡 Contoh Penggunaan
 
-- Data `target`, `current`, dan `riwayat` disimpan ke `localStorage`:
-  - `ssk-savings` — menyimpan `target` & `current`
-  - `ssk-history` — menyimpan array log tabungan
+**Target Tabungan:** Rp 1.000.000  
+**Wishlist:**
+- Lightstick JKT48 – Rp 250.000
+- Tiket handshake – Rp 100.000
+- CD SSK – Rp 120.000
 
-## ✍️ Contoh Format Riwayat
+**Pengeluaran:**
+- Ongkir Shopee: Rp 25.000
+- Top-up OVO: Rp 50.000
 
-```json
-[
-  {
-    "amount": 50000,
-    "timestamp": 1717753581145
-  },
-  {
-    "amount": 100000,
-    "timestamp": 1717753661245
-  }
-]
-```
+---
 
-## 🔮 Rencana Fitur Selanjutnya
+## 🔒 Catatan
 
-- 🔁 Tombol **reset** semua data
-- ✏️ Edit atau hapus riwayat penambahan
-- 📊 Grafik riwayat tabungan dari waktu ke waktu
+- Semua data disimpan hanya di browser (localStorage), jadi aman dan privat, tapi **tidak tersimpan di cloud**.
+- Jangan hapus cache browser jika ingin menyimpan data dalam waktu lama.
 
+---
+
+## ❤️ Kontribusi
+
+Pull request dan masukan sangat diterima. Kamu bisa menambahkan fitur:
+- Dark mode
+- Ekspor data
+- Koneksi ke Google Sheets / Firebase
+
+---
+
+## 📄 Lisensi
+
+MIT License.
